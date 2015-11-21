@@ -14,8 +14,8 @@ function single_element(arr) {
   for(j = 0; j < temp.length; j++){
   	var el = temp[j];
   	var flag = false;
-  	for(i = 0;i < temp.length && i != j;i++){
-  		if( temp[i] == el ){ 			
+  	for(i = 0;i < temp.length ;i++){
+  		if( temp[i] == el && i != j){ 			
   			flag = true;
   			break;
   		}
