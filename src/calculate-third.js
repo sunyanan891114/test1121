@@ -25,6 +25,7 @@ function even_group_calculate_average(arr) {
             i--;
         }
     }
-    console.log(result);
+    if(result.length == 0)
+        result = [0];
     return result;
 }
