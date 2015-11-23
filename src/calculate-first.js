@@ -1,5 +1,4 @@
 function single_element(arr) {
-	var map = {};
 	var temp = [];
   arr.filter(function(el, index) {
   	if(index % 2 != 0)
@@ -9,7 +8,6 @@ function single_element(arr) {
   console.log(temp);
   var result = [];
   var i = 0;
-  
   var j = 0;
   for(j = 0; j < temp.length; j++){
   	var el = temp[j];
