@@ -1,25 +1,15 @@
 function single_element(arr) {
-	var temp = [];
-  arr.filter(function(el, index) {
-  	if(index % 2 != 0)
-  		temp.push(el);
-  	return temp;
-  });
-  console.log(temp);
-  var result = [];
-  var i = 0;
-  var j = 0;
-  for(j = 0; j < temp.length; j++){
-  	var el = temp[j];
-  	var flag = false;
-  	for(i = 0;i < temp.length ;i++){
-  		if( temp[i] == el && i != j){ 			
-  			flag = true;
-  			break;
-  		}
-  	}
-  	if(!flag)
-  		result.push(el);
-  }
-  return result;
+    var result = [];
+    var temp= [];
+    for(var i = 0 ; i < arr.length; i++){
+        if(i % 2 != 0)
+            temp.push(arr[i]);
+    }
+    temp.forEach(function (el, index) {
+        if(  temp.indexOf(el,index + 1) == -1 && temp.lastIndexOf(el,index-1) == -1){
+                result.push(el);
+        }
+    });
+    console.log(result);
+    return result;
 }

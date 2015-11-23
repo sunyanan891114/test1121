@@ -18,7 +18,6 @@ function even_group_calculate_average(arr) {
         else {
         }
     }
-
     for (i = 0; i < result.length; i++) {
         if (result[i] === undefined) {
             result.splice(i, 1);
